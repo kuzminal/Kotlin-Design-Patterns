@@ -1,3 +1,4 @@
+import Parser.Companion.property
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContains
 import kotlin.test.assertEquals
@@ -17,7 +18,7 @@ class AbstractFactoryTest {
 
     @Test
     fun createServerAndCheckProperties() {
-        val server = server(listOf("port: 8080", "environment: production"))
+        val server = Parser.server(listOf("port: 8080", "environment: production"))
         val portProperty = property("port: 8080")
         val environment = property("environment: production")
         assertContains(server.properties, portProperty)
