@@ -1,4 +1,9 @@
+package creational
+
+import IntProperty
+import Parser
 import Parser.Companion.property
+import StringProperty
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContains
 import kotlin.test.assertEquals
